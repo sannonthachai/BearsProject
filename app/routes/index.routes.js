@@ -1,6 +1,7 @@
-module.exports = (app) => {
+module.exports = (router) => {
     let index = require('../controllers/index.controllers');
-    app.get('/',index.render);
-    app.post('/baers',index.postBears);
-    app.get('/bears',index.getBears);
+    router.get('/',index.render);
+    router.route('/bears')
+        .post(index.postBears)
+        .get(index.getBears);
 };
