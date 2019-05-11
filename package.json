@@ -1,0 +1,26 @@
+{
+  "name": "BearsProject",
+  "version": "1.0.0",
+  "description": "Bears Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sannonthachai/BearsProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sannonthachai/BearsProject/issues"
+  },
+  "homepage": "https://github.com/sannonthachai/BearsProject#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.7",
+    "morgan": "^1.9.1"
+  }
+}
