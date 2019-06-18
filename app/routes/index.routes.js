@@ -11,7 +11,7 @@ module.exports = (router) => {
         }
         let SECRET = 'MY_SECRET_KEY'
         let token = jwt.encode(payload, SECRET)
-        res.cookie('Bearer', token, { httpOnly: true, secure: true })
+        res.cookie('jwt', token, { httpOnly: true })
         res.send(token)
     })
     router.get('/', requireJWTAuth, (req,res) => {
