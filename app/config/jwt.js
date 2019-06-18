@@ -3,7 +3,7 @@ const ExtractJwt = require("passport-jwt").ExtractJwt
 const SECRET = 'MY_SECRET_KEY'
 
 const jwtOptions = {
-    jwtFromRequest: ExtractJwt.fromHeader("authorization"),
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: SECRET, //SECRETเดียวกับตอนencodeในกรณีนี้คือ MY_SECRET_KEY
  }
 

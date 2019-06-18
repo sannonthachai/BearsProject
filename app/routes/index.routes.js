@@ -10,7 +10,9 @@ module.exports = (router) => {
             iat: new Date().getTime()
         }
         let SECRET = 'MY_SECRET_KEY'
-        res.send(jwt.encode(payload, SECRET))
+        let token = jwt.encode(payload, SECRET)
+        res.cookie('Bearer', token, { httpOnly: true, secure: true })
+        res.send(token)
     })
     router.get('/', requireJWTAuth, (req,res) => {
         res.send('ยอดเงินคงเหลือ 50')

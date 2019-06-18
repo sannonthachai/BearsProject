@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const passport = require('passport')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const app = express()
 
 // Connect Database
@@ -19,6 +20,9 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 app.use(bodyParser.json())
+
+// Cookie-parser
+app.use(cookieParser())
 
 // Passport Middleware
 const jwtAuth = require('./app/config/jwt')
